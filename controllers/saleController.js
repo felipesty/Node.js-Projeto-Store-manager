@@ -7,7 +7,7 @@ const getSales = async (_req, res) => {
 
 const getSaleById = async (req, res) => {
   const { id } = req.params;
-  const sale = await saleService.getSaleId(id);
+  const sale = await saleService.getSaleById(id);
   if (!sale) return res.status(404).json({ message: 'Sale not found' });
   return res.status(200).json(sale);
 };
