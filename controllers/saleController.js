@@ -1,6 +1,6 @@
 const saleService = require('../services/saleService');
 
-const getSales = async (_req, res) => {
+const getAll = async (_req, res) => {
   const sales = await saleService.getSales();
   return res.status(200).json(sales);
 };
@@ -13,6 +13,6 @@ const getSaleById = async (req, res) => {
 };
 
 module.exports = {
-  getSales,
+  getAll,
   getSaleById,
 }; 
