@@ -24,7 +24,7 @@ const updateProduct = async (req, res) => {
   const { id } = req.params;
   const { name } = req.body;
 
-  const productId = await productService.updateProduct(id);
+  const productId = await productService.getProductById(id);
   if (!productId) return res.status(404).json({ message: 'Product not found' });
 
   const product = await productService.updateProduct(id, name);
