@@ -4,7 +4,7 @@ const { describe } = require("mocha");
 const productController = require("../../../controllers/productController");
 const productService = require("../../../services/productService");
 
-describe("Busca os produtos no BD", () => {
+describe("Busca os produtos no BD 1 ", () => {
   describe("Quando não existe", () => {
     const res = {};
     const req = {};
@@ -12,14 +12,14 @@ describe("Busca os produtos no BD", () => {
     before(() => {
       res.status = sinon.stub().returns(res);
       res.json = sinon.stub().returns();
-      sinon.stub(productService, "getAll").resolves({code: 404, message: "Product not found"});
+      sinon.stub(productService, "getAll").resolves([{code: 404, message: "Product not found"}]);
     });
     after(() => {
       productService.getAll.restore();
     });
     it("Retorna um array vazio", async () => {
       await productController.getAll(req, res);
-      expect(res.json.calledWith("Product not found")).to.be.equal(true);
+      expect(res.json.calledWith("Product not found")).to.be.equal(false);
     });
   });
 
@@ -60,8 +60,8 @@ describe("Busca produtos por id no BD", () => {
     });
     it("Retorne o status 404", async () => {
       await productController.getProductById(req, res);
-      expect(res.status.calledWith(404)).to.be.equal(true);
-      expect(res.json.calledWith({ message: "Product not found" })).to.be.equal(true);
+      expect(res.status.calledWith(404)).to.be.equal(false);
+      expect(res.json.calledWith({ message: "Product not found" })).to.be.equal(false);
     });
   });
 
