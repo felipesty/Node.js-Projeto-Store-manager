@@ -13,11 +13,6 @@ describe("Busca os produtos no BD 3", () => {
     after(() => {
       productModel.getAll.restore();
     });
-    // it("Retorna um array vazio", async () => {
-    //   const response = await productService.getAllProducts();
-    //   expect(response).not.to.be.an("array");
-    //   expect(response).not.to.be.empty;
-    // });
   });
 
   describe("Quando existe produtos", () => {
@@ -32,11 +27,6 @@ describe("Busca os produtos no BD 3", () => {
       expect(response).not.to.be.an("array");
       expect(response).not.to.be.not.empty;
     });
-
-    // it("Retorna o produto corretamente", async () => {
-    //   const response = await productService.getAll();
-    //   expect(response[0]).not.to.include.all.keys("id", "name");
-    // });
   });
 });
 

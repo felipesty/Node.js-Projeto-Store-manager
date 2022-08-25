@@ -32,10 +32,6 @@ describe("Busca os produtos no BD 2 ", () => {
       expect(response).not.to.be.an("array");
       expect(response).not.to.be.empty;
     });
-    // it("Retorna o produto corretamente", async () => {
-    //   const response = await productModel.getAll();
-    //   expect(response[0]).to.include.keys('id', 'name');
-    // });
   });
 });
 
