@@ -1,16 +1,22 @@
-# 🚧 README em construção 🚧
+# Projeto Store manager
+Segundo projeto utilizando o Node, que reforçou ainda mais os conhecimentos adquiridos com Node, API rest com o express e middlewares, mas dessa vez também foram realizados testes utilizando o mocha, chai e sinon, além de Arquitetura de Software com as camadas de Model, Service e Controller.
+Com tudo isso foram preciso fazer os seguintes requisitos:
+   - GET /products e /products/:id
+   - POST /products com validações
+   - POST /sales com validações
+   - GET /sales e /sales/:id
+   - PUT /products/:id
+   - DELETE /products/:id
+   - Realizar testes da aplicação
 
-<!-- Olá, Tryber!
-
-Esse é apenas um arquivo inicial para o README do seu projeto.
-
-É essencial que você preencha esse documento por conta própria, ok?
-
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
-
--->
+---
+## Tecnologias utilizadas
+ - Node.js
+ - Middlewares
+ - Express
+ - MySQL
+ - Testes com o Mocha
+ - Arquitetura de Software
+    - Model
+    - Service
+    - Controller
