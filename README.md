@@ -1,6 +1,6 @@
 # Projeto Store manager
 Segundo projeto utilizando o Node, que reforçou ainda mais os conhecimentos adquiridos com Node, API rest com o express e middlewares, mas dessa vez também foram realizados testes utilizando o mocha, chai e sinon, além de Arquitetura de Software com as camadas de Model, Service e Controller.
-Com tudo isso foram preciso fazer os seguintes requisitos:
+Com tudo isso foi preciso fazer os seguintes requisitos:
    - GET /products e /products/:id
    - POST /products com validações
    - POST /sales com validações
